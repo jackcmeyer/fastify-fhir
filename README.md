@@ -7,8 +7,8 @@ A Fastify Plugin that provides FHIR API Routes
 
 ## Getting Started For Development
 
-1. Install [Node.js])(https://nodejs.org/en/)
-2. Install [Yarn](https://yarnpkg.com/
+1. Install [Node.js](https://nodejs.org/en/)
+2. Install [Yarn](https://yarnpkg.com/)
 3. Clone this repository `git clone https://github.com/fastify-fhir.git`
 4. Go to the directory `cd fastify-fhir`
 5. Install Dependencies `yarn install`
