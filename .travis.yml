@@ -1,0 +1,17 @@
+language: node_js
+
+node_js:
+  - "12"
+
+install:
+  - travis_retry npm install
+
+script:
+  - yarn lint
+  - yarn test
+
+after_script:
+- COVERALLS_REPO_TOKEN=$coveralls_repo_token npm run coveralls
+
+notifications:
+  email: false

@@ -1,0 +1,42 @@
+{
+  "name": "@jackcmeyer/fastify-fhir",
+  "version": "0.0.0-alpha",
+  "description": "FHIR plugin for Fastify",
+  "main": "index.js",
+  "repository": "git@github.com:jackcmeyer/fastify-fhir.git",
+  "publishConfig": {
+    "registry": "https://npm.pkg.github.com/"
+  },
+  "author": "Jack Meyer <jackcmeyer@gmail.com>",
+  "license": "MIT",
+  "scripts": {
+    "prepublishOnly": "yarn build",
+    "build": "npx tsc",
+    "test": "jest",
+    "test:ci": "CI=true jest",
+    "coveralls": "npm run test:ci -- --coverage --watchAll=false && cat ./coverage/lcov.info | coveralls",
+    "lint": "eslint \"src/**/*.{js,jsx,ts,tsx}\" \"test/**/*.{js,jsx,ts,tsx}\" --fix"
+  },
+  "dependencies": {
+    "fastify": "^2.11.0",
+    "fastify-plugin": "^1.6.0",
+    "typescript": "^3.7.5"
+  },
+  "devDependencies": {
+    "@types/jest": "^24.9.1",
+    "@types/node": "^13.5.0",
+    "@typescript-eslint/eslint-plugin": "^2.17.0",
+    "@typescript-eslint/parser": "^2.17.0",
+    "coveralls": "~3.0.9",
+    "eslint": "^6.8.0",
+    "eslint-config-airbnb-base": "^14.0.0",
+    "eslint-plugin-import": "^2.20.0",
+    "eslint-plugin-jest": "^23.6.0",
+    "jest": "^25.1.0",
+    "ts-jest": "^25.0.0",
+    "ts-node": "^8.6.2"
+  },
+  "peerDependencies": {
+    "fastify": "^2.11.0"
+  }
+}
